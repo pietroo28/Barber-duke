@@ -77,8 +77,23 @@ body {
 }
 .card-container {
   display: flex;
-  gap: 20px; /* Espaço entre os cards */
-  justify-content: center; /* Centraliza os cards horizontalmente */
-  flex-wrap: nowrap; /* Evita quebra de linha */
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Permitir quebra de linha */
 }
-/* Cores específicas para cada card */
+
+/* Em telas menores que 768px (tablets e celulares grandes) */
+@media (max-width: 768px) {
+  .card {
+    width: 45%; /* Dois cards por linha */
+    margin-bottom: 20px;
+  }
+}
+
+/* Em telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Um card por linha */
+    margin-bottom: 20px;
+  }
+}
